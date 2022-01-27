@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import LeadBarLink from "./components/LeadBarLink";
 import axios from "axios";
 
 function App() {
@@ -11,7 +12,8 @@ useEffect(async () => {
   return (
     <div>
       <h3>Imma LeadBar Link</h3>
-      {notes.map(note => <h5 key={note.id}>{note.content}</h5>)}
+      <LeadBarLink />
+      {notes.map(note => <h5 key={note.id}>{note.content} {note.date}</h5>)}
     </div>
   );
 }

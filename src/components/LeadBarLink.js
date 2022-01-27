@@ -26,7 +26,7 @@ function LeadBarLink() {
             label="Click me now to get more than above!"
             color="secondary"
             clickable
-            onDelete={() => {console.log('click!')}}
+            onDelete={console.log}
             deleteIcon={<CheckCircleIcon />}
           />
         </Stack>

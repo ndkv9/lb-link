@@ -2,9 +2,12 @@ import React from 'react';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
+import CelebrationIcon from '@mui/icons-material/Celebration';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 function LeadBarLink() {
   return (
+    <div>
     <a  href="https://www.serviceform.com/" style={{textDecoration: "none"}}>
       <Stack direction="row" spacing={1}>
         <Chip
@@ -15,7 +18,20 @@ function LeadBarLink() {
         />
       </Stack>
     </a>
-
+      <hr/>
+      <a  href="https://www.serviceform.com/" style={{textDecoration: "none"}}>
+        <Stack direction="row" spacing={1}>
+          <Chip
+            icon={<CelebrationIcon />}
+            label="Click me now to get more than above!"
+            color="secondary"
+            clickable
+            onDelete={() => {console.log('click!')}}
+            deleteIcon={<CheckCircleIcon />}
+          />
+        </Stack>
+      </a>
+    </div>
   )
 }
 

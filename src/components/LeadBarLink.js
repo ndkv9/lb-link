@@ -4,34 +4,24 @@ import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Link from '@mui/material/Link'
 
-function LeadBarLink() {
+function LeadBarLink({text, url, logo, btn, color}) {
   return (
-    <div>
-    <a  href="https://www.serviceform.com/" style={{textDecoration: "none"}}>
+    <Link  href={url} underline="none">
       <Stack direction="row" spacing={1}>
         <Chip
-          avatar={<Avatar alt="Me" src="https://lh3.google.com/u/0/ogw/ADea4I7weFt0Z_euBRJDYIrQOD3bxFMC3USRqc-RXaRD=s83-c-mo" />}
-          label="Click me now to get 40% discount!!!"
-          color="primary"
+          // with avatar
+          avatar={<Avatar alt="logo" src={logo} />}
+          // with button
+          onDelete={console.log}
+          deleteIcon={<CheckCircleIcon />}
+          label={text}
+          color={color}
           clickable
         />
       </Stack>
-    </a>
-      <hr/>
-      <a  href="https://www.serviceform.com/" style={{textDecoration: "none"}}>
-        <Stack direction="row" spacing={1}>
-          <Chip
-            icon={<CelebrationIcon />}
-            label="Click me now to get more than above!"
-            color="secondary"
-            clickable
-            onDelete={console.log}
-            deleteIcon={<CheckCircleIcon />}
-          />
-        </Stack>
-      </a>
-    </div>
+    </Link>
   )
 }
 
